@@ -5,12 +5,14 @@ use strict;
 use warnings;
 
 use Class::Utils qw(set_params split_params);
+use Data::HTML::Element::Button;
 use Data::HTML::Element::Textarea;
 use Error::Pure qw(err);
 use Mo::utils 0.06 qw(check_bool check_required);
 use Mo::utils::CSS 0.02 qw(check_css_class);
 use Readonly;
 use Scalar::Util qw(blessed);
+use Tags::HTML::Element::Button;
 use Tags::HTML::Element::Textarea;
 
 Readonly::Scalar our $CSS_CLASS_ADD_COMMENT => 'add-comment';
@@ -41,6 +43,7 @@ sub new {
 			'add_comment' => 'Add comment',
 			'author' => 'Name of author',
 			'date' => 'Date',
+			'save' => 'Save',
 		},
 	};
 
@@ -55,15 +58,24 @@ sub new {
 	check_required($self, 'mode_comment_form');
 	check_bool($self, 'mode_comment_form');
 
-	$self->{'_tags_textarea'} = Tags::HTML::Element::Textarea->new(
+	my %c = (
 		'css' => $self->{'css'},
 		'tags' => $self->{'tags'},
 	);
+	$self->{'_tags_textarea'} = Tags::HTML::Element::Textarea->new(%c);
 	my $data_textarea = Data::HTML::Element::Textarea->new(
 		'autofocus' => 1,
 		'rows' => 6,
 	);
 	$self->{'_tags_textarea'}->init($data_textarea);
+
+	$self->{'_tags_button'} = Tags::HTML::Element::Button->new(%c);
+	my $data_button = Data::HTML::Element::Button->new(
+		'data' => [
+			$self->_text('save'),
+		],
+	);
+	$self->{'_tags_button'}->init($data_button);
 
 	# Object.
 	return $self;
@@ -125,9 +137,13 @@ sub _process {
 			['a', 'class', 'title'],
 			['d', $self->_text('add_comment')],
 			['e', 'div'],
+			['b', 'form'],
+			['a', 'method', 'post'],
 		);
 		$self->{'_tags_textarea'}->process;
+		$self->{'_tags_button'}->process;
 		$self->{'tags'}->put(
+			['e', 'form'],
 			['e', 'div'],
 		);
 	}
@@ -188,6 +204,8 @@ sub _process_css {
 		['e'],
 	);
 	if ($self->{'mode_comment_form'}) {
+		$self->{'_tags_textarea'}->process_css;
+		$self->{'_tags_button'}->process_css;
 		$self->{'css'}->put(
 			['s', '.'.$self->{'css_class'}.' .'.$CSS_CLASS_ADD_COMMENT],
 			['d', 'max-width', '600px'],
@@ -199,8 +217,12 @@ sub _process_css {
 			['d', 'font-weight', 'bold'],
 			['d', 'font-size', '1.2em'],
 			['e'],
+
+			# Rewrite default Tags::HTML::Element::Button CSS.
+			['s', 'button'],
+			['d', 'margin', 0],
+			['e'],
 		);
-		$self->{'_tags_textarea'}->process_css;
 	}
 
 	return;
