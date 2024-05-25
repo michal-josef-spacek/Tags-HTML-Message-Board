@@ -23,6 +23,7 @@ requires 'Data::HTML::Element::Textarea' => 0;
 requires 'Error::Pure' => 0.07;
 requires 'Mo::utils' => 0.06;
 requires 'Mo::utils::CSS' => 0.02;
+requires 'Mo::utils::Language' => 0.05;
 requires 'Readonly' => 0;
 requires 'Scalar::Util' => 0;
 requires 'Tags::HTML' => 0;

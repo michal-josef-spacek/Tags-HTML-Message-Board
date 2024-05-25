@@ -10,6 +10,7 @@ use Data::HTML::Element::Textarea;
 use Error::Pure qw(err);
 use Mo::utils 0.06 qw(check_bool check_required);
 use Mo::utils::CSS 0.02 qw(check_css_class);
+use Mo::utils::Language 0.05 qw(check_language_639_2);
 use Readonly;
 use Scalar::Util qw(blessed);
 use Tags::HTML::Element::Button;
@@ -53,6 +54,9 @@ sub new {
 	# Check 'css_class'.
 	check_required($self, 'css_class');
 	check_css_class($self, 'css_class');
+
+	# Check lang.
+	check_language_639_2($self, 'lang');
 
 	# Check 'mode_comment_form'.
 	check_required($self, 'mode_comment_form');
