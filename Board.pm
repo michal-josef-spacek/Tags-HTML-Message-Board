@@ -62,6 +62,17 @@ sub new {
 	check_required($self, 'mode_comment_form');
 	check_bool($self, 'mode_comment_form');
 
+	# Check text for lang.
+	if (! defined $self->{'text'}) {
+		err "Parameter 'text' is required.";
+	}
+	if (ref $self->{'text'} ne 'HASH') {
+		err "Parameter 'text' must be a hash with language texts.";
+	}
+	if (! exists $self->{'text'}->{$self->{'lang'}}) {
+		err "Texts for language '$self->{'lang'}' doesn't exist.";
+	}
+
 	my %c = (
 		'css' => $self->{'css'},
 		'tags' => $self->{'tags'},
