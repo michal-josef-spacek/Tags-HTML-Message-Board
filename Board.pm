@@ -6,9 +6,9 @@ use warnings;
 
 use Class::Utils qw(set_params split_params);
 use Data::HTML::Element::Textarea;
+use Error::Pure qw(err);
 use Mo::utils 0.06 qw(check_bool check_required);
 use Mo::utils::CSS 0.02 qw(check_css_class);
-use Error::Pure qw(err);
 use Readonly;
 use Scalar::Util qw(blessed);
 use Tags::HTML::Element::Textarea;
