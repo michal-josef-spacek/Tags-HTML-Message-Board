@@ -111,7 +111,7 @@ sub _init {
 		|| ! blessed($board)
 		|| ! $board->isa('Data::Message::Board')) {
 
-		err 'Data object for message board is not valid.';
+		err "Data object must be a 'Data::Message::Board' instance.";
 	}
 
 	$self->{'_board'} = $board;
