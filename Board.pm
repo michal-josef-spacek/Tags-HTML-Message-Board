@@ -42,7 +42,7 @@ sub new {
 	$self->{'text'} = {
 		'eng' => {
 			'add_comment' => 'Add comment',
-			'author' => 'Name of author',
+			'author' => 'Author',
 			'date' => 'Date',
 			'save' => 'Save',
 		},
