@@ -7,7 +7,7 @@ use Error::Pure::Utils qw(clean);
 use Tags::HTML::Message::Board;
 use Tags::Output::Structure;
 use Test::MockObject;
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 12;
 use Test::NoWarnings;
 
 # Test.
@@ -101,4 +101,35 @@ eval {
 };
 is($EVAL_ERROR, "Texts for language 'eng' doesn't exist.\n",
 	"Texts for language 'eng' doesn't exist.");
+clean();
+
+# Test.
+eval {
+	Tags::HTML::Message::Board->new(
+		'lang' => 'cze',
+		'text' => {
+			'cze' => {},
+		},
+	);
+};
+is($EVAL_ERROR, "Number of texts isn't same as expected.\n",
+	"Number of texts isn't same as expected (no translations for cze).");
+clean();
+
+# Test.
+eval {
+	Tags::HTML::Message::Board->new(
+		'lang' => 'cze',
+		'text' => {
+			'cze' => {
+				'foo' => 'Foo',
+				'bar' => 'Bar',
+				'baz' => 'Baz',
+				'xxx' => 'XXX',
+			},
+		},
+	);
+};
+is($EVAL_ERROR, "Text for lang 'cze' and key 'add_comment' doesn't exist.\n",
+	"Text for lang 'cze' and key 'add_comment' doesn't exist (no right translations).");
 clean();

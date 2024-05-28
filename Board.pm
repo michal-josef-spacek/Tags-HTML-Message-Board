@@ -16,6 +16,7 @@ use Scalar::Util qw(blessed);
 use Tags::HTML::Element::Button;
 use Tags::HTML::Element::Textarea;
 
+Readonly::Array our @TEXT_KEYS => qw(add_comment author date save);
 Readonly::Scalar our $CSS_CLASS_ADD_COMMENT => 'add-comment';
 
 our $VERSION = 0.01;
@@ -62,7 +63,7 @@ sub new {
 	check_required($self, 'mode_comment_form');
 	check_bool($self, 'mode_comment_form');
 
-	# Check text for lang.
+	# Check text.
 	if (! defined $self->{'text'}) {
 		err "Parameter 'text' is required.";
 	}
@@ -71,6 +72,14 @@ sub new {
 	}
 	if (! exists $self->{'text'}->{$self->{'lang'}}) {
 		err "Texts for language '$self->{'lang'}' doesn't exist.";
+	}
+	if (@TEXT_KEYS != keys %{$self->{'text'}->{$self->{'lang'}}}) {
+		err "Number of texts isn't same as expected.";
+	}
+	foreach my $req_text_key (@TEXT_KEYS) {
+		if (! exists $self->{'text'}->{$self->{'lang'}}->{$req_text_key}) {
+			err "Text for lang '$self->{'lang'}' and key '$req_text_key' doesn't exist.";
+		}
 	}
 
 	my %c = (
@@ -273,10 +282,6 @@ sub _tags_message {
 
 sub _text {
 	my ($self, $key) = @_;
-
-	if (! exists $self->{'text'}->{$self->{'lang'}}->{$key}) {
-		err "Text for lang '$self->{'lang'}' and key '$key' doesn't exist.";
-	}
 
 	return $self->{'text'}->{$self->{'lang'}}->{$key};
 }
