@@ -1,7 +1,8 @@
 TODO
 ====
 2. Doc
-5.
+5. Improve 'text' parameter processing. Add check, cleanup _text() helper.
+6.
 
 Applied
 =======
