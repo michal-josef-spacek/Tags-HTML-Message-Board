@@ -1,6 +1,5 @@
 TODO
 ====
-2. Doc
 6.
 
 Applied
@@ -15,4 +14,7 @@ OK [20240524] skim
 OK [20240528] skim
 
 5. Improve 'text' parameter processing. Add check, cleanup _text() helper.
+OK [20240528] skim
+
+2. Doc
 OK [20240528] skim
