@@ -321,6 +321,7 @@ EXAMPLE2
              'component' => 'Tags::HTML::Container',
              'data' => [sub {
                      my $self = shift;
+                     $message_board->process_css;
                      $message_board->init($board);
                      $message_board->process;
                      return;
