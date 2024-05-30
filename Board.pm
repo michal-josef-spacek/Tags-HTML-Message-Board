@@ -4,7 +4,7 @@ use base qw(Tags::HTML);
 use strict;
 use warnings;
 
-use Class::Utils qw(set_params split_params);
+use Class::Utils 0.06 qw(set_params split_params);
 use Data::HTML::Element::Button;
 use Data::HTML::Element::Textarea;
 use Error::Pure qw(err);

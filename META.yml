@@ -29,7 +29,7 @@ no_index:
     - t
     - xt
 requires:
-  Class::Utils: 0.02
+  Class::Utils: 0.06
   Data::HTML::Element::Button: 0
   Data::HTML::Element::Textarea: 0
   Error::Pure: 0.07
@@ -38,7 +38,7 @@ requires:
   Mo::utils::Language: 0.05
   Readonly: 0
   Scalar::Util: 0
-  Tags::HTML: 0
+  Tags::HTML: 0.06
   Tags::HTML::Element::Button: 0
   Tags::HTML::Element::Textarea: 0
   perl: 5.8.0
