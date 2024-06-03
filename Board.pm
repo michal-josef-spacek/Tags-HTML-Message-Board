@@ -204,26 +204,26 @@ sub _process_css {
 		['d', 'margin-left', '10px'],
 		['e'],
 
-		['s', '.author'],
+		['s', '.'.$self->{'css_class'}.' .author'],
 		['d', 'font-weight', 'bold'],
 		['d', 'font-size', '1.2em'],
 		['e'],
 
-		['s', '.comment .author'],
+		['s', '.'.$self->{'css_class'}.' .comment .author'],
 		['d', 'font-size', '1em'],
 		['e'],
 
-		['s', '.date'],
+		['s', '.'.$self->{'css_class'}.' .date'],
 		['d', 'color', '#555'],
 		['d', 'font-size', '0.9em'],
 		['d', 'margin-bottom', '10px'],
 		['e'],
 
-		['s', '.comment .date'],
+		['s', '.'.$self->{'css_class'}.' .comment .date'],
 		['d', 'font-size', '0.8em'],
 		['e'],
 
-		['s', '.text'],
+		['s', '.'.$self->{'css_class'}.' .text'],
 		['d', 'margin-top', '10px'],
 		['e'],
 	);
