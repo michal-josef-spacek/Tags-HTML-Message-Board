@@ -1,4 +1,5 @@
 0.02
+ - Add Tags helper for message board blank page.
  - Improve CSS to wrap classes inside.
  - Rename example file in Message::Board.
 
