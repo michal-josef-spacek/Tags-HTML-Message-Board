@@ -1,7 +1,7 @@
 Board.pm
 Changes
 examples/plack_app_message_board.pl
-examples/print_block_html_and_css.pl
+examples/print_message_board_html_and_css.pl
 images/plack_app_message_board.png
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm

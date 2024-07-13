@@ -451,7 +451,7 @@ Returns undef.
 
 =head1 EXAMPLE1
 
-=for comment filename=print_block_html_and_css.pl
+=for comment filename=print_message_board_html_and_css.pl
 
  use strict;
  use warnings;
