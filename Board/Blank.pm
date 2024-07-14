@@ -18,7 +18,7 @@ use Tags::HTML::Element::Textarea;
 Readonly::Array our @TEXT_KEYS => qw(add_message_board save);
 Readonly::Scalar our $CSS_CLASS_ADD_COMMENT => 'add-comment';
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Constructor.
 sub new {
@@ -514,6 +514,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
