@@ -190,6 +190,7 @@ sub _process_css {
 	$self->{'css'}->put(
 		['s', '.'.$self->{'css_class'}],
 		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['d', 'margin', '1em'],
 		['e'],
 
 		['s', '.'.$self->{'css_class'}.' .main-message'],

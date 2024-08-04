@@ -23,6 +23,7 @@ is_deeply(
 		# Main CSS.
 		['s', '.message-board'],
 		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['d', 'margin', '1em'],
 		['e'],
 
 		['s', '.message-board .main-message'],
@@ -131,6 +132,7 @@ is_deeply(
 		# Main CSS.
 		['s', '.message-board'],
 		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['d', 'margin', '1em'],
 		['e'],
 
 		['s', '.message-board .main-message'],
@@ -197,6 +199,7 @@ is_deeply(
 		# Main CSS.
 		['s', '.my-board'],
 		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['d', 'margin', '1em'],
 		['e'],
 
 		['s', '.my-board .main-message'],
