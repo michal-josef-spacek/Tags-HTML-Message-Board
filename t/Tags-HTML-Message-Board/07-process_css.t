@@ -63,6 +63,7 @@ is_deeply(
 
 		['s', '.message-board .text'],
 		['d', 'margin-top', '10px'],
+		['d', 'white-space', 'pre-wrap'],
 		['e'],
 
 		# Textarea.
@@ -166,6 +167,7 @@ is_deeply(
 
 		['s', '.message-board .text'],
 		['d', 'margin-top', '10px'],
+		['d', 'white-space', 'pre-wrap'],
 		['e'],
 	],
 	'Message board CSS code (without add comment form).',
@@ -227,6 +229,7 @@ is_deeply(
 
 		['s', '.my-board .text'],
 		['d', 'margin-top', '10px'],
+		['d', 'white-space', 'pre-wrap'],
 		['e'],
 
 		# Textarea.

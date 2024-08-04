@@ -230,6 +230,7 @@ sub _process_css {
 
 		['s', '.'.$self->{'css_class'}.' .text'],
 		['d', 'margin-top', '10px'],
+		['d', 'white-space', 'pre-wrap'],
 		['e'],
 	);
 	if ($self->{'mode_comment_form'}) {
@@ -274,10 +275,10 @@ sub _tags_message {
 		['d', $self->_text('date').': '.$obj->date->dmy('.').' '.$obj->date->hms],
 		['e', 'div'],
 
-		['b', 'div'],
+		['b', 'pre'],
 		['a', 'class', 'text'],
 		['d', $obj->message],
-		['e', 'div'],
+		['e', 'pre'],
 
 		['e', 'div'],
 	);

@@ -1,4 +1,5 @@
 0.04
+ - Change message from div element to pre with wrapping.
 
 0.03 2024-08-04T12:46:18+02:00
  - Add identifications for textarea and button elements.
