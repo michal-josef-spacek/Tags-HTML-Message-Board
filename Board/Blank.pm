@@ -140,51 +140,6 @@ sub _process_css {
 		['d', 'margin', 0],
 		['e'],
 	);
-#	$self->{'css'}->put(
-#		['s', '.'.$self->{'css_class'}.' .main-message'],
-#		['d', 'border', '1px solid #ccc'],
-#		['d', 'padding', '20px'],
-#		['d', 'border-radius', '5px'],
-#		['d', 'background-color', '#f9f9f9'],
-#		['d', 'max-width', '600px'],
-#		['d', 'margin', 'auto'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .comments'],
-#		['d', 'max-width', '600px'],
-#		['d', 'margin', 'auto'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .comment'],
-#		['d', 'border-left', '2px solid #ccc'],
-#		['d', 'padding-left', '10px'],
-#		['d', 'margin-top', '20px'],
-#		['d', 'margin-left', '10px'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .author'],
-#		['d', 'font-weight', 'bold'],
-#		['d', 'font-size', '1.2em'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .comment .author'],
-#		['d', 'font-size', '1em'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .date'],
-#		['d', 'color', '#555'],
-#		['d', 'font-size', '0.9em'],
-#		['d', 'margin-bottom', '10px'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .comment .date'],
-#		['d', 'font-size', '0.8em'],
-#		['e'],
-#
-#		['s', '.'.$self->{'css_class'}.' .text'],
-#		['d', 'margin-top', '10px'],
-#		['e'],
-#	);
 
 	return;
 }
