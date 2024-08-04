@@ -130,6 +130,7 @@ sub _process_css {
 	$self->{'_tags_button'}->process_css;
 	$self->{'css'}->put(
 		['s', '.'.$self->{'css_class'}],
+		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
 		['d', 'max-width', '600px'],
 		['d', 'margin', 'auto'],
 		['e'],

@@ -21,6 +21,10 @@ is_deeply(
 	$ret_ar,
 	[
 		# Main CSS.
+		['s', '.message-board'],
+		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['e'],
+
 		['s', '.message-board .main-message'],
 		['d', 'border', '1px solid #ccc'],
 		['d', 'padding', '20px'],
@@ -125,6 +129,10 @@ is_deeply(
 	$ret_ar,
 	[
 		# Main CSS.
+		['s', '.message-board'],
+		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['e'],
+
 		['s', '.message-board .main-message'],
 		['d', 'border', '1px solid #ccc'],
 		['d', 'padding', '20px'],
@@ -187,6 +195,10 @@ is_deeply(
 	$ret_ar,
 	[
 		# Main CSS.
+		['s', '.my-board'],
+		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['e'],
+
 		['s', '.my-board .main-message'],
 		['d', 'border', '1px solid #ccc'],
 		['d', 'padding', '20px'],

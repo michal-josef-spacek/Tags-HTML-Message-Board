@@ -188,6 +188,10 @@ sub _process_css {
 	my $self = shift;
 
 	$self->{'css'}->put(
+		['s', '.'.$self->{'css_class'}],
+		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
+		['e'],
+
 		['s', '.'.$self->{'css_class'}.' .main-message'],
 		['d', 'border', '1px solid #ccc'],
 		['d', 'padding', '20px'],
