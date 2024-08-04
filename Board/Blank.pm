@@ -107,6 +107,8 @@ sub _process {
 		['b', 'div'],
 		['a', 'class', $self->{'css_class'}],
 		['b', 'div'],
+		['a', 'class', 'new-message-board'],
+		['b', 'div'],
 		['a', 'class', 'title'],
 		['d', $self->_text('add_message_board')],
 		['e', 'div'],
@@ -117,6 +119,7 @@ sub _process {
 	$self->{'_tags_button'}->process;
 	$self->{'tags'}->put(
 		['e', 'form'],
+		['e', 'div'],
 		['e', 'div'],
 	);
 
@@ -130,6 +133,10 @@ sub _process_css {
 	$self->{'_tags_button'}->process_css;
 	$self->{'css'}->put(
 		['s', '.'.$self->{'css_class'}],
+		['d', 'margin', '1em'],
+		['e'],
+
+		['s', '.'.$self->{'css_class'}.' .new-message-board'],
 		['d', 'font-family', 'Arial, Helvetica, sans-serif'],
 		['d', 'max-width', '600px'],
 		['d', 'margin', 'auto'],

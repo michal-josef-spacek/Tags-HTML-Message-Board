@@ -22,6 +22,9 @@ is_deeply(
 		['a', 'class', 'message-board-blank'],
 
 		['b', 'div'],
+		['a', 'class', 'new-message-board'],
+
+		['b', 'div'],
 		['a', 'class', 'title'],
 		['d', 'Add message board'],
 		['e', 'div'],
@@ -40,6 +43,8 @@ is_deeply(
 		['d', 'Save'],
 		['e', 'button'],
 		['e', 'form'],
+
+		['e', 'div'],
 
 		['e', 'div'],
 	],
@@ -61,6 +66,9 @@ is_deeply(
 		['a', 'class', 'my-blank'],
 
 		['b', 'div'],
+		['a', 'class', 'new-message-board'],
+
+		['b', 'div'],
 		['a', 'class', 'title'],
 		['d', 'Add message board'],
 		['e', 'div'],
@@ -79,6 +87,8 @@ is_deeply(
 		['d', 'Save'],
 		['e', 'button'],
 		['e', 'form'],
+
+		['e', 'div'],
 
 		['e', 'div'],
 	],
@@ -106,6 +116,9 @@ is_deeply(
 		['a', 'class', 'message-board-blank'],
 
 		['b', 'div'],
+		['a', 'class', 'new-message-board'],
+
+		['b', 'div'],
 		['a', 'class', 'title'],
 		['d', decode_utf8('Vytvořit nástěnku')],
 		['e', 'div'],
@@ -124,6 +137,8 @@ is_deeply(
 		['d', decode_utf8('Uložit')],
 		['e', 'button'],
 		['e', 'form'],
+
+		['e', 'div'],
 
 		['e', 'div'],
 	],
