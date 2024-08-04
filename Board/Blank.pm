@@ -79,6 +79,8 @@ sub new {
 	$self->{'_tags_textarea'} = Tags::HTML::Element::Textarea->new(%c);
 	my $data_textarea = Data::HTML::Element::Textarea->new(
 		'autofocus' => 1,
+		'id' => 'message_board_message',
+		'name' => 'message_board_message',
 		'rows' => 6,
 	);
 	$self->{'_tags_textarea'}->init($data_textarea);
@@ -88,6 +90,9 @@ sub new {
 		'data' => [
 			$self->_text('save'),
 		],
+		'name' => 'action',
+		'type' => 'submit',
+		'value' => 'add_message_board',
 	);
 	$self->{'_tags_button'}->init($data_button);
 
