@@ -42,7 +42,7 @@ test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Shared::Fixture::Data::Message::Board::Example' => 0;
 tests_recursive;
-version '0.05';
+version '0.06';
 
 # Run.
 WriteAll();
